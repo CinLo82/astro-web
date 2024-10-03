@@ -1,46 +1,26 @@
 ---
-//server only
+import MainLayout from "../components/layouts/MainLayout.astro";
 const name = 'Cinlo';
-const title = 'Home Page';
 
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
+<MainLayout title="Home Page">
+    <h1>{name}</h1>
+    <p>Momento actual:  {new Date().toLocaleTimeString()}</p>
+    <p id="current-time">Momento actual real:</p>
 
-        <nav>
-            <a href="/">Home Page</a>
-            <a href="/about">About</a>
-            <a href="/contact">Contact</a>
-        </nav>
+    <footer>
+        Año 2023
+    </footer>
 
+    <script>
+        const currentYear: number = new Date().getFullYear();
+        const footer = document.querySelector('footer') as HTMLElement;
+        const currentTimeParagraph = document.querySelector('#current-time') as HTMLParagraphElement;
 
-		<h1>{name}</h1>
-        <p>Momento actual:  {new Date().toLocaleTimeString()}</p>
-        <p id="current-time">Momento actual real:</p>
+        footer.innerHTML = `Año: ${currentYear}`;
 
-        <footer>
-            Año 2023
-        </footer>
+        currentTimeParagraph.innerText = `Momento actual real: ${new Date().toLocaleTimeString()}`;
+    </script>
+</MainLayout>
 
-        <script>
-            const currentYear: number = new Date().getFullYear();
-            const footer = document.querySelector('footer') as HTMLElement;
-            const currentTimeParagraph = document.querySelector('#current-time') as HTMLParagraphElement;
-
-            footer.innerHTML = `Año: ${currentYear}`;
-
-            currentTimeParagraph.innerText = `Momento actual real: ${new Date().toLocaleTimeString()}`;
-
-
-
-        </script>
-	</body>
-</html>
