@@ -16,6 +16,7 @@ const blogCollection = defineCollection({
 
         //Relación
         author: reference('author'),
+        isDraft: z.boolean().default(false)
     })
 })
 

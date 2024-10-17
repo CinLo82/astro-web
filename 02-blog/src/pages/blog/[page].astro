@@ -23,6 +23,7 @@ const { page } = Astro.props;
     <h1 class="text-3xl font-semibold capitalize lg:text-4xl text-white">
       Cinlo's Blog paginado
     </h1>
+    <a href="/" class="text-blue-500 hover:underline ">Regresar</a>
   </div>
 
   <section class="bg-gray-900" aria-label="Entradas de blog">
@@ -50,11 +51,11 @@ const { page } = Astro.props;
 </MainLayout>
 
 <style>
-  a {
+  section a {
     @apply bg-blue-500 text-white p-2 rounded hover:bg-blue-600 cursor-pointer;
   }
 
-  .disabled {
+  section .disabled {
     @apply bg-gray-600 hover:bg-gray-600;
   }
 </style>

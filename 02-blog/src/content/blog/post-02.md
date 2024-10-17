@@ -4,6 +4,7 @@ date: 2024-08-10
 description: Aprende a desarrollar aplicaciones móviles con Flutter y Dart.
 author: john-smith
 image: '/src/content/blog/images/post-02.png'
+isDraft: false
 tags: [Flutter, Mobile Development, Dart]
 ---
 

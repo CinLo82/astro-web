@@ -18,6 +18,7 @@ export const getStaticPaths = ( async () => {
 const { post } = Astro.props;
 const frontmatter = post.data;
 
+
 const { Content, headings } = await post.render();
 
 // Obtener la colección de autores y encontrar el autor correspondiente

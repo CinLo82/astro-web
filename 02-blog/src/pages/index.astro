@@ -4,8 +4,7 @@ import { siteConfig } from '../config/site-config';
 import { getCollection } from "astro:content";
 import TypedBlogPost from "src/components/TypedBlogPost.astro";
 
-const blogPosts = await getCollection('blog')
-
+const blogPosts = await getCollection('blog', (post) => post.data.isDraft === false);
 
 ---
 
