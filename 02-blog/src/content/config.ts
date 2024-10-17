@@ -25,7 +25,13 @@ const authorCollection = defineCollection({
     schema: ({ image }) => 
         z.object({
             name: z.string(),
-            avatar: image()
+            avatar: image(),
+            bio: z.string(),
+            twitter: z.string(),
+            github: z.string(),
+            linkedin: z.string(),
+            subtitle: z.string()
+
         })
 })
 
