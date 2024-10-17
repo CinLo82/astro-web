@@ -35,7 +35,7 @@ if (!author) {
         
         <Image class="text-md text-gray-400 mb-0  rounded-full" width={50} height={50} src={author.data.avatar} alt={author.data.name} />
         <div class="flex flex-col ml-2">
-            <a href="#">{author.data.name}</a>
+            <a href={`/blog/${frontmatter.author}`}>{author.data.name}</a>
             <span class="text-xs text-white">{Formatter.formatDate(frontmatter.date)}</span>
         
         </div>
